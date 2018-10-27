@@ -1,0 +1,93 @@
+a {
+  color: rgba(0,0,0,.7);
+}
+a:hover {
+  color: rgba(0,0,0,.6);
+}
+/**
+ * Top bar
+ */
+
+.top-bar {
+  color: #495057;
+  background: #f8f9fa;
+  padding: 1rem;
+  font-weight: 300;
+}
+.topbar-link {
+  text-decoration: none;
+}
+.topbar-link:hover {
+  text-decoration: none;
+}
+
+/**
+ * Nav bar
+ */
+.navbar-cart-product {
+  border-bottom: 1px solid #495057;
+  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.navbar-cart-total {
+  text-align: right;
+  font-size: 1.3em;
+  padding: .5em 0;
+}
+.navbar-cart-product-link:hover {
+  text-decoration: none;
+}
+
+
+.nav-item {
+  text-transform: uppercase;
+  font-size: .9em;
+  font-weight: 300;
+}
+.navbar-brand {
+  font-weight: 700;
+}
+
+.navbar-icon-link {
+  color: #343a40;
+  margin: 0 .5em;
+}
+.navbar-icon-link:hover {
+  text-decoration: none;
+}
+
+.navbar-cart-product-link {
+  color: #343a40;
+  font-weight: bold;
+
+}
+
+/* Footer */
+#footer-services {
+  background-color: #f8f9fa;
+}
+#footer-menu {
+  background-color: #dee2e6;
+}
+#footer-copyright {
+  background-color: #343a40;
+  color: #dee2e6;
+}
+.payment-icon {
+  width: 2rem;
+}
+
+
+.service-column {
+  display: flex;
+  margin-bottom: .2rem;
+}
+
+.service-column i {
+  font-size: 3em;
+  width: 4rem;
+  border-right: 1px solid #ccc;
+  padding-right: 1rem;
+  margin-right: 1rem;
+}

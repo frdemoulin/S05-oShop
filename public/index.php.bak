@@ -1,0 +1,31 @@
+<?php
+
+// Inclusion autoload de Composer
+require '../vendor/autoload.php';
+
+// Point d'entrée unique = front controller
+// grâce à la réécriture d'URL
+// (donc la présence d'un .htaccess dans ce dossier)
+
+
+require __DIR__.'/../app/controllers/MainController.php';
+
+// URL demandée
+$url = isset($_GET['_url']) ? trim($_GET['_url']) : '/';
+
+// On dispatch la requête vers le bon contrôleur/méthode
+if($url == '/') {
+    // On instancie notre contrôleur ici car d'après la feuille de routes nous aurons différents contrôleurs selon les URLs demandées
+    $controller = new MainController();
+    $controller->home();
+} else if ($url == '/mentions-legales') {
+    $controller = new MainController();
+    $controller->legalMentions();
+} else {
+    // Page non trouvée 404
+    // On modifie l'entête de réponse pour avoir un statut 404
+    header("HTTP/1.0 404 Not Found");
+
+    $controller = new MainController();
+    $controller->error404();
+}

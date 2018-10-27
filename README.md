@@ -1,2 +1,4 @@
-# S05-oShop
-repo global atelier oShop
+# S05 oShop
+
+Repo global atelier oShop
+
