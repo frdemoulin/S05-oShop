@@ -2,6 +2,24 @@
 
 class CatalogController
 {
+    // BONUS
+    public function brand($params = [])
+    {
+        // on instancie un objet de la classe DBData
+        $dbData = new DBData();
+        // on récupère les infos de la marque
+        $infosBrand = $dbData->getBrandDetails($params['id']);
+        // on récupère la liste des produits de la marque (BONUS)
+        $infosAllProductsBrand = $dbData->getAllProductsBrand($params['id']);
+        // $params = $match['params']
+        $this->show('brand', [
+            'title' => 'Chaussures de la catégorie #'.$params['id'],
+            'id' => $params['id'],
+            'infos-brand' => $infosBrand,
+            'infos-all-products-brand' => $infosAllProductsBrand
+        ]);
+    }
+
     public function category($params = [])
     {
         // on instancie un objet de la classe DBData

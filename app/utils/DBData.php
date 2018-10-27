@@ -158,4 +158,18 @@ class DBData {
         return $products;
     }
 
+    /**
+         * Méthode permettant de retourner tous les produits d'une marque donnée et le nom de la marque
+         *
+         * @param int $brandId
+         * @return Products[]
+         */
+        public function getAllProductsBrand($brandId) {
+            // TODO
+            $sql = "SELECT product.name, brand.name AS 'name-brand' FROM product INNER JOIN brand ON product.brand_id = brand.id WHERE brand.id ='{$brandId}'";
+            $stmt = $this->dbh->query($sql);
+            $products = $stmt->fetchAll(PDO::FETCH_CLASS, 'Product');
+            return $products;
+        }
+
 }

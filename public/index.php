@@ -40,6 +40,7 @@ $router->map('GET', '/', 'MainController#home', 'home');
 $router->map('GET', '/mentions-legales', 'MainController#legalMentions', 'legal-mentions');
 $router->map('GET', '/catalogue/categorie/[i:id]', 'CatalogController#category', 'category');
 $router->map('GET', '/catalogue/type/[i:id]', 'CatalogController#type', 'type');
+$router->map('GET', '/catalogue/marque/[i:id]', 'CatalogController#brand', 'brand');
 $router->map('GET', '/catalogue/produit/[i:id]', 'CatalogController#product', 'product');
 $router->map('GET', '/mon-panier', 'CartController#cart', 'cart');
 $router->map('POST', '/ajout-panier', 'CartController#add', 'cart-add');
