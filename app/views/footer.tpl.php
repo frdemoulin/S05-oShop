@@ -72,7 +72,7 @@
                         <h6 class="text-uppercase text-dark mb-3">Produits</h6>
 
                         <ul class="list-unstyled">
-                            <?php //dump($viewVars['infos-type']); 
+                            <?php //dump($viewVars['infos-types']); 
                             // TODO
                             foreach ($viewVars['infos-types'] as $type):?>
 

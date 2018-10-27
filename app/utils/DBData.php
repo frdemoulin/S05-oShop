@@ -57,7 +57,7 @@ class DBData {
         $sql = "SELECT * FROM product WHERE id='{$productId}'";
         $stmt = $this->dbh->query($sql);
         $product = $stmt->fetchAll(PDO::FETCH_CLASS, 'Product');
-        dump($product);
+        //dump($product);
         return $product;
     }
     
@@ -141,4 +141,21 @@ class DBData {
         $products = $stmt->fetchAll(PDO::FETCH_CLASS, 'Product');
         return $products;
     }
+
+    // BONUS
+
+    /**
+     * Méthode permettant de retourner tous les produits d'une catégorie donnée et le nom de la catégorie
+     *
+     * @param int $categoryId
+     * @return Products[]
+     */
+    public function getAllProductsCategory($categoryId) {
+        // TODO
+        $sql = "SELECT product.name, category.name AS 'name-category' FROM product INNER JOIN category ON product.category_id = category.id WHERE category.id ='{$categoryId}'";
+        $stmt = $this->dbh->query($sql);
+        $products = $stmt->fetchAll(PDO::FETCH_CLASS, 'Product');
+        return $products;
+    }
+
 }

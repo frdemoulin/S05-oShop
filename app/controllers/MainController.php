@@ -38,6 +38,13 @@ class MainController
         // $viewVars est disponible dans chaque fichier de vue
         $viewVars['baseUrl'] = $_SERVER['BASE_URI'];
 
+        // on transmet les infos des types et des marques à la home
+        $dbData = new DBData();
+        $infosTypes = $dbData->getFooterProductTypes();
+        $infosBrands = $dbData->getFooterBrands();
+        $viewVars['infos-types'] = $infosTypes;
+        $viewVars['infos-brands'] = $infosBrands;
+
         include(__DIR__.'/../views/header.tpl.php');
         include(__DIR__.'/../views/'.$viewName.'.tpl.php');
         include(__DIR__.'/../views/footer.tpl.php');
