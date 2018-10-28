@@ -1,19 +1,21 @@
 <?php
 
-class Category
+class Category extends CoreModel
 {
-    private $id;
+    //private $id;
     private $name;
     private $subtitle;
     private $picture;
     private $home_order;
-    private $created_at;
-    private $updated_at;
+    //private $created_at;
+    //private $updated_at;
 
+    /*
     public function getId()
     {
         return $this->id;
     }
+    */
 
     public function getName()
     {
@@ -39,6 +41,7 @@ class Category
         return $this;
     }
 
+    /*
     public function getCreated_at()
     {
         return $this->created_at;
@@ -62,6 +65,7 @@ class Category
 
         return $this;
     }
+    */
 
     /**
      * Get the value of subtitle

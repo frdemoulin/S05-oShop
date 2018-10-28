@@ -9,9 +9,9 @@ Une classe de Model représente un enregistrement de la table correspondante
 
 */
 
-class Product
+class Product extends CoreModel
 {
-    private $id;
+    //private $id;
     private $name;
     private $description;
     private $picture;
@@ -19,16 +19,18 @@ class Product
     private $rate;
     private $status;
     private $home_order;
-    private $created_at;
-    private $updated_at;
+    //private $created_at;
+    //private $updated_at;
     private $brand_id;
     private $category_id;
     private $type_id;
 
+    /*
     public function getId()
     {
         return $this->id;
     }
+    */
 
     public function getName()
     {
@@ -54,6 +56,7 @@ class Product
         return $this;
     }
 
+    /*
     public function getCreated_at()
     {
         return $this->created_at;
@@ -77,7 +80,8 @@ class Product
 
         return $this;
     }
-
+    */
+    
     /**
      * Get the value of subtitle
      */ 

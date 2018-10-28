@@ -8,10 +8,12 @@ class Brand extends CoreModel
     //private $created_at;
     //private $updated_at;
 
+    /*
     public function getId()
     {
         return $this->id;
     }
+    */
 
     public function getName()
     {
@@ -37,6 +39,7 @@ class Brand extends CoreModel
         return $this;
     }
 
+    /*
     public function getCreated_at()
     {
         return $this->created_at;
@@ -60,4 +63,5 @@ class Brand extends CoreModel
 
         return $this;
     }
+    */
 }
