@@ -1,12 +1,12 @@
 <?php
 
-class Brand
+class Brand extends CoreModel
 {
-    private $id;
+    //private $id;
     private $name;
     private $footer_order;
-    private $created_at;
-    private $updated_at;
+    //private $created_at;
+    //private $updated_at;
 
     public function getId()
     {

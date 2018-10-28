@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * If you install VarDumper outside of a Symfony application, you must require the vendor/autoload.php file in your code to enable the class autoloading mechanism provided by Composer
+ * doc VarDumper : https://symfony.com/doc/current/components/var_dumper.html
+ */
 // Inclusion autoload de Composer
 require '../vendor/autoload.php';
 
